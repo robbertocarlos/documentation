@@ -1,0 +1,67 @@
+site_name: Документация тестового портала
+theme:
+  name: material
+  language: ru
+  logo: assets/logo.svg
+  palette:
+    primary: red
+    accent: indigo
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.footer
+    - content.tooltips
+extra:
+  homepage: https://compassplus.ru/
+  generator: false
+
+plugins:
+  - search
+  #- pdf-export:
+   #   combined: true
+    #  combined_output_path: pdf/combined.pdf
+  - tags:
+      tags_file: tags.md
+markdown_extensions:
+    - toc:
+        permalink: "#"
+    - abbr
+    - footnotes
+    - pymdownx.snippets:
+        auto_append:
+        - includes/abbreviations.md
+nav:
+    - Пользовательская документация:
+        - Введение: index.md
+        - Общее описание : user/index.md
+        - Основные объекты: user/main-objects.md
+        - Вход в TestPortal: user/login.md
+        - Работа в приложении:
+            - Работа с проектом тестирования:
+                - Настройка прав пользователей: user/work-in-app/projects/user-rights-settings.md
+                - Настройка окружения тестирования: user/work-in-app/projects/environment-settings.md
+                - Настройка Milestones: user/work-in-app/projects/milestone-settings.md
+            - Домашняя страница: 
+                - Настройка работ: user/work-in-app/home/jobs.md
+                - Просмотр назначенных работ в разрезе Milestones (Assigned): user/work-in-app/home/assigned.md
+            - Работа с тест-кейсами и с тест-сьютами (Tests):
+                - Работа с тест-кейсами: user/work-in-app/tests/test-cases.md
+                - Работа с тест-сьютами: user/work-in-app/tests/test-suites.md
+            - Управление рабочим процессом (Workflow):
+                - Работа с задачами (Tasks): user/work-in-app/workflow/tasks.md
+                - Работа с ревью тестов (Reviews): user/work-in-app/workflow/reviews.md
+                - Работа с задачами автоматизации (Automation Tasks): user/work-in-app/workflow/automation-tasks.md
+            - Генерация отчетов:
+                - Отчеты QC (QC Reports): user/work-in-app/reports/reports-qc.md
+                - Пользовательские отчеты (User Reports): user/work-in-app/reports/reports-user.md
+                - Отчеты по этапам (Milestone Reports): user/work-in-app/reports/reports-milestone.md
+            - Поиск: 
+                - Поиск задач: user/work-in-app/search/search-tasks.md
+                - Поиск кейсов: user/work-in-app/search/search-cases.md
+                - Поиск требований: user/work-in-app/search/search-requirements.md
+            - Уведомления: user/work-in-app/notifications.md
+    - Администратор: admin/admin.md
+    - Тэги: tags.md
